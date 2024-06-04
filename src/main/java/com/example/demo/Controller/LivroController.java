@@ -9,6 +9,7 @@ import java.util.List;
 
 @RequestMapping(value = "/livro")
 @RestController
+@CrossOrigin
 public class LivroController {
         @Autowired
         private LivroService livroService;
