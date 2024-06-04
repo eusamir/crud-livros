@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  app:
+    image: lib-image
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db.qpwvxyxcftabhegsupqb.supabase.co:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=provaundb123
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
+      - SPRING_JPA_PROPERTIES_HIBERNATE_CACHE_USE_SECOND_LEVEL_CACHE=false
+      - SPRING_JPA_PROPERTIES_HIBERNATE_CACHE_USE_QUERY_CACHE=false
+      - LOGGING_LEVEL_ORG_HIBERNATE_SQL=DEBUG
+      - LOGGING_LEVEL_ORG_HIBERNATE_TYPE_DESCRIPTOR_SQL_BASICBINDER=TRACE
